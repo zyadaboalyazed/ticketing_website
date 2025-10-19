@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketing System - Book Your Event</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">🎫 TicketHub</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#bookings">My Bookings</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Book Your Event Tickets</h2>
+                <p>Discover and book tickets for concerts, sports, theater, and more!</p>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="events-section">
+            <div class="container">
+                <h2>Available Events</h2>
+                <div id="events-list" class="events-grid">
+                    <!-- Events will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form -->
+        <section id="booking-form-section" class="booking-section hidden">
+            <div class="container">
+                <h2>Book Tickets</h2>
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="event-name">Event</label>
+                        <input type="text" id="event-name" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-name">Your Name</label>
+                        <input type="text" id="customer-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-email">Email</label>
+                        <input type="email" id="customer-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="num-tickets">Number of Tickets</label>
+                        <input type="number" id="num-tickets" min="1" max="10" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="total-price">Total Price</label>
+                        <input type="text" id="total-price" readonly>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                    <button type="button" class="btn btn-secondary" id="cancel-booking">Cancel</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- My Bookings Section -->
+        <section id="bookings" class="bookings-section">
+            <div class="container">
+                <h2>My Bookings</h2>
+                <div id="bookings-list" class="bookings-grid">
+                    <!-- Bookings will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TicketHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification hidden"></div>
+
+    <script src="static/js/app.js"></script>
+</body>
+</html>

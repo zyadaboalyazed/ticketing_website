@@ -1,6 +1,6 @@
 import React from 'react';
-import { ticketService } from '../../services/ticket.service';
-import { contractService } from '../../services/contract.service';
+import { ticketService } from '../services/ticket.service';
+import { contractService } from '../services/contract.service';
 import './Reports.css';
 
 const Reports: React.FC = () => {

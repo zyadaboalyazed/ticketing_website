@@ -1,0 +1,19 @@
+# Database
+*.db
+*.sqlite3
+postgres_data/
+
+# Environment
+.env
+.env.local
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
